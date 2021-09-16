@@ -1,0 +1,15 @@
+var numeroSecreto = parseInt(Math.random() * 10);
+
+function Chutar() {
+  var resultado = document.getElementById("resultado");
+  var chute = parseInt(document.getElementById("valor").value);
+  resultado.innerHTML = "Você acertou!";
+  if (chute == numeroSecreto) {
+    console.log("acertou");
+  } else if (chute > 10 || chute < 0) {
+    resultado.innerHTML = "Você deve digitar um número de 0 a 10";
+  } else {
+    resultado.innerHTML = "Você errou, o número secreto é " + numeroSecreto;
+  }
+}
+
